@@ -5,42 +5,42 @@
 class OpentelemetryShell < Formula
   desc "OpenTelemetry functions for shells"
   homepage "https://github.com/krzko/opentelemetry-shell"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.4/opentelemetry-shell_0.0.4_darwin_arm64.tar.gz"
-      sha256 "fbf0a2c69c82ae3bd215baac4f9571021b8d0c0f076ab7f1b24eff16987a803c"
+      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.5/opentelemetry-shell_0.0.5_darwin_arm64.tar.gz"
+      sha256 "5fa9982bb6b99c6302cd3fa23c0a4bdc0f410828ea714a05ec7cc0c0e280a704"
 
       def install
-        system "make install"
+        system "make _banner && make install"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.4/opentelemetry-shell_0.0.4_darwin_amd64.tar.gz"
-      sha256 "dd9321816882694f4d66dd05f15d52d5af82779185545eeed970285d53b99ae4"
+      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.5/opentelemetry-shell_0.0.5_darwin_amd64.tar.gz"
+      sha256 "404ce370cef5657b37dd68f426868665798f1098686c17c0be1fde7ccb048b11"
 
       def install
-        system "make install"
+        system "make _banner && make install"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.4/opentelemetry-shell_0.0.4_linux_amd64.tar.gz"
-      sha256 "14f3ed5b191e101faa20e320d24a50eab43abd2b2374149d5c924a28538268a0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.5/opentelemetry-shell_0.0.5_linux_arm64.tar.gz"
+      sha256 "4be2020362d57b14c43f54faab94b9ade859e5ccf21854773ebe234f6bb82d44"
 
       def install
-        system "make install"
+        system "make _banner && make install"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.4/opentelemetry-shell_0.0.4_linux_arm64.tar.gz"
-      sha256 "c6f1d72ad3e2814ea943f5f72965a3aa89fc2e237fcd38bd8b1bae6003d9699c"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/opentelemetry-shell/releases/download/v0.0.5/opentelemetry-shell_0.0.5_linux_amd64.tar.gz"
+      sha256 "31d5247926bfe900ec7fbf341ba90cbfdc6dd980c48ce5793d09a93eb092ec12"
 
       def install
-        system "make install"
+        system "make _banner && make install"
       end
     end
   end
