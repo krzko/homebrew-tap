@@ -1,2 +1,3 @@
 # homebrew-tap
-🍺 Homebrew Formulae to @krzko binaries, powered by @goreleaser
+
+🍺 Homebrew Formulae for @krzko binaries, powered by @goreleaser
