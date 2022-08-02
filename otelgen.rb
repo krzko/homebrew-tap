@@ -5,20 +5,20 @@
 class Otelgen < Formula
   desc "A tool to generate synthetic OpenTelemetry logs, metrics and traces, the core observability pillars"
   homepage "https://github.com/krzko/otelgen"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/krzko/otelgen/releases/download/v0.0.1/otelgen_darwin_arm64.tar.gz"
-      sha256 "dcc26b089a1046e3aa56f4b83d84787824bd1680d6a32acc6159b8d7e9705c0a"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/otelgen/releases/download/v0.0.2/otelgen_darwin_amd64.tar.gz"
+      sha256 "bbf675df08243a84aadbca058a74af60d607c63ce15c1ec6ca29e7c7748a0f07"
 
       def install
         bin.install "otelgen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/otelgen/releases/download/v0.0.1/otelgen_darwin_amd64.tar.gz"
-      sha256 "4f5593d28ba0151dd1e729e78ff4b5799c6cfd0afa6a938eb14ddf984aa7affe"
+    if Hardware::CPU.arm?
+      url "https://github.com/krzko/otelgen/releases/download/v0.0.2/otelgen_darwin_arm64.tar.gz"
+      sha256 "d5fa7f1adc84441dcffef742c99c111606e8b76aaac3c6f7219a8126ae439554"
 
       def install
         bin.install "otelgen"
@@ -28,16 +28,16 @@ class Otelgen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/otelgen/releases/download/v0.0.1/otelgen_linux_arm64.tar.gz"
-      sha256 "94ac56d70a2521a7770442c44b479314a50f7027d7a558c38eb3922aeae95cec"
+      url "https://github.com/krzko/otelgen/releases/download/v0.0.2/otelgen_linux_arm64.tar.gz"
+      sha256 "f7b44be5dcb210836142d332b182587047e24af036ca8b2fa3f9a96621499b95"
 
       def install
         bin.install "otelgen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/otelgen/releases/download/v0.0.1/otelgen_linux_amd64.tar.gz"
-      sha256 "0b60bc7d4dfb702d54ca0fd1302ed78ae0d6f10cae1a1513ddf6594a287bf9c4"
+      url "https://github.com/krzko/otelgen/releases/download/v0.0.2/otelgen_linux_amd64.tar.gz"
+      sha256 "d92fbf2efecf86fa6bdd2c4168b659d66e6bd2fec1adc501c5822e7c1e39d4ef"
 
       def install
         bin.install "otelgen"
