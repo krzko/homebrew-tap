@@ -5,20 +5,20 @@
 class Tvctl < Formula
   desc "A command-line utility to interact with TradingView"
   homepage "https://github.com/krzko/tvctl"
-  version "0.0.7"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/krzko/tvctl/releases/download/v0.0.7/tvctl_darwin_arm64.tar.gz"
-      sha256 "3fe203ae4d5fda8a60bb66e2f2d086ffdd72a128a1b83b0caa2054caed0db4e3"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.0/tvctl_darwin_amd64.tar.gz"
+      sha256 "2cedf6445c61b3d722d6207fad4173d11be514b33c8b557ac98df16d0b621bd4"
 
       def install
         bin.install "tvctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.0.7/tvctl_darwin_amd64.tar.gz"
-      sha256 "c791fe987b33b6bb4028575963227fdf807597b8bd53775a116b0375d8691407"
+    if Hardware::CPU.arm?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.0/tvctl_darwin_arm64.tar.gz"
+      sha256 "e5cf62633f576046b12b355d206decafe019224c6bb7c617588131ebef6bd965"
 
       def install
         bin.install "tvctl"
@@ -28,16 +28,16 @@ class Tvctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/tvctl/releases/download/v0.0.7/tvctl_linux_arm64.tar.gz"
-      sha256 "05678b779a2c4c35ed8223b1b3ffe9cee3fa1173017bd9e11bcf16e83504d8dd"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.0/tvctl_linux_arm64.tar.gz"
+      sha256 "f0853e1a76a628a74a6a782d7d5546d7d75b21e4ecee7e407fbce8bd83ed7757"
 
       def install
         bin.install "tvctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.0.7/tvctl_linux_amd64.tar.gz"
-      sha256 "bc4898d2b547211aa343330ae8a318e08fcd66ef3127e0bba353e284f8f7612a"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.0/tvctl_linux_amd64.tar.gz"
+      sha256 "88623f5a106b91ca1f32843fc6041a133f106ec1ea110990737be4db8f7cc459"
 
       def install
         bin.install "tvctl"
