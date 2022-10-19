@@ -5,20 +5,20 @@
 class Otelgen < Formula
   desc "A tool to generate synthetic OpenTelemetry logs, metrics and traces, the core observability pillars"
   homepage "https://github.com/krzko/otelgen"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/otelgen/releases/download/v0.3.1/otelgen_darwin_arm64.tar.gz"
-      sha256 "c5d9b251a9835b982bf498f4442d812df367f1313f390c24ede7cf9e413ba118"
+      url "https://github.com/krzko/otelgen/releases/download/v0.3.2/otelgen_darwin_arm64.tar.gz"
+      sha256 "32079df5c7dc00c2d15d1a6e9797de2efaba669226eaa56b155184d46b75e8c2"
 
       def install
         bin.install "otelgen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/otelgen/releases/download/v0.3.1/otelgen_darwin_amd64.tar.gz"
-      sha256 "dc4545e5c6bcb24725cba236c4773d372c8432a19b3e898aef7d59ae6b6c2d92"
+      url "https://github.com/krzko/otelgen/releases/download/v0.3.2/otelgen_darwin_amd64.tar.gz"
+      sha256 "2920bf398ddd12ae883925caf1db66dfcb07f31bd27ac849b180f5ade6121f04"
 
       def install
         bin.install "otelgen"
@@ -28,16 +28,16 @@ class Otelgen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/otelgen/releases/download/v0.3.1/otelgen_linux_arm64.tar.gz"
-      sha256 "ee3c2904bce67f38637a761c6060db9c4c6f0192b18d05ba92e462c9dc5e671a"
+      url "https://github.com/krzko/otelgen/releases/download/v0.3.2/otelgen_linux_arm64.tar.gz"
+      sha256 "de71381d6208edbcf4803dedd0e97cf8f4d865182694030f40b3dff412a08ad4"
 
       def install
         bin.install "otelgen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/otelgen/releases/download/v0.3.1/otelgen_linux_amd64.tar.gz"
-      sha256 "34817af72947d07a5c61927308e42900c6f48758e6eda3bb6033c12f94635c98"
+      url "https://github.com/krzko/otelgen/releases/download/v0.3.2/otelgen_linux_amd64.tar.gz"
+      sha256 "d52baf7fae8f7818253e121c65d249128ab8a80dcab744af14265e89e1c1f2c8"
 
       def install
         bin.install "otelgen"
