@@ -5,20 +5,20 @@
 class Tvctl < Formula
   desc "A command-line utility to interact with TradingView"
   homepage "https://github.com/krzko/tvctl"
-  version "0.7.1"
+  version "0.7.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.1/tvctl_darwin_arm64.tar.gz"
-      sha256 "9a91083faf385810524f53d7dfac7b4d85b19def23b09b14fd73193fe4323010"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_darwin_arm64.tar.gz"
+      sha256 "24babda6954f29797122579efbe2517346433b3d54d05c1283b89ecabbb6fbb0"
 
       def install
         bin.install "tvctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.1/tvctl_darwin_amd64.tar.gz"
-      sha256 "583bc5b5c6dc840734b17da1cb8c38e8820a1f436b7c168700c83e30444e62ff"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_darwin_amd64.tar.gz"
+      sha256 "9bdf585d128fbda50a94b505af4d89323a819d7e48406bfeb4e866c016e7f12b"
 
       def install
         bin.install "tvctl"
@@ -27,17 +27,17 @@ class Tvctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.1/tvctl_linux_arm64.tar.gz"
-      sha256 "16eb035ef1c6fe0bcbfa5cbd2cbcc5db5bbdda2f396c6c2ccd19fd22a4dc54e6"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_linux_amd64.tar.gz"
+      sha256 "f11dff724b93ee3d380217cb9cd8ae08918a7b0c598a71b98f78163092bcb39d"
 
       def install
         bin.install "tvctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.1/tvctl_linux_amd64.tar.gz"
-      sha256 "7b4c505c807f2c4db948b6298b5444258b48712bc0d485cacab50c38d41ac787"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_linux_arm64.tar.gz"
+      sha256 "e755549a18bb24b247d1c1848d1afb07cac44afd6e0f7a5e5c680a52d691e90c"
 
       def install
         bin.install "tvctl"
