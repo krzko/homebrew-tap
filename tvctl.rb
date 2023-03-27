@@ -5,20 +5,20 @@
 class Tvctl < Formula
   desc "A command-line utility to interact with TradingView"
   homepage "https://github.com/krzko/tvctl"
-  version "0.7.3"
+  version "0.7.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_darwin_arm64.tar.gz"
-      sha256 "cb2924897786bc32746da6041b4329a38feece15ffad72c4c2ecb472cec4171a"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.4/tvctl_darwin_amd64.tar.gz"
+      sha256 "933555ded3bdefd47dbf6de645648f007e190bb1248c9b446c63239054547ce0"
 
       def install
         bin.install "tvctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_darwin_amd64.tar.gz"
-      sha256 "ce31ead8604fa77fed31ddb04d379e295df217c0cb0a985683edb57e7af832d7"
+    if Hardware::CPU.arm?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.4/tvctl_darwin_arm64.tar.gz"
+      sha256 "90155802a58fef6f0bb4408b6dc16681eeed6417116745af362ea49bce9ee5b3"
 
       def install
         bin.install "tvctl"
@@ -27,17 +27,17 @@ class Tvctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_linux_amd64.tar.gz"
-      sha256 "e6e903ff23eae4937c7887d004e23ba6d0aefdb9444c47e132ad64970cc096cf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.4/tvctl_linux_arm64.tar.gz"
+      sha256 "f542cd0d90c3b5f16cdb293dff33dd93bf7b00d76f7708735a7028b11fda68b2"
 
       def install
         bin.install "tvctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_linux_arm64.tar.gz"
-      sha256 "6e372743b83e8c3bdf0dcff81d01cb58e0c069e4477aa60e627c403811afb43e"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.4/tvctl_linux_amd64.tar.gz"
+      sha256 "4e7db5d93f798622434e0f5a36316585e47d0c9012e20f9307cd80562ef08652"
 
       def install
         bin.install "tvctl"
