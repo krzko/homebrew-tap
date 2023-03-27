@@ -5,20 +5,20 @@
 class Proto2yaml < Formula
   desc "A command-line utility to export Protocol Buffers (proto) files to YAML, and JSON"
   homepage "https://github.com/krzko/proto2yaml"
-  version "0.6.2"
+  version "0.6.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.2/proto2yaml_darwin_arm64.tar.gz"
-      sha256 "6e76656940f2187ac6ba6b2d1019dc55f045c2a0ef1b57c11d74c06af004b3d2"
+      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.3/proto2yaml_darwin_arm64.tar.gz"
+      sha256 "0308c08cae907dbdbe1f98bb4818a876dc7ff864109fc11447a0d622d21ccd85"
 
       def install
         bin.install "proto2yaml"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.2/proto2yaml_darwin_amd64.tar.gz"
-      sha256 "a7093beec5969794e4927b352fa9de95b28b9b022cdae8d4cd8a9db5eca185d0"
+      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.3/proto2yaml_darwin_amd64.tar.gz"
+      sha256 "6256122cea502dd8e183e09a7b41a0cc61aea562242ab63698e3856d3e76340d"
 
       def install
         bin.install "proto2yaml"
@@ -27,17 +27,17 @@ class Proto2yaml < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.2/proto2yaml_linux_arm64.tar.gz"
-      sha256 "ed2a5c679a0af55946e39d4d41e9d59024fe0314e36a3120d28df231cccd24e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.3/proto2yaml_linux_amd64.tar.gz"
+      sha256 "aab64766cb8b9d36805bb0678a250c375beb369e1e1eb52a7f32f4beb322d7e2"
 
       def install
         bin.install "proto2yaml"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.2/proto2yaml_linux_amd64.tar.gz"
-      sha256 "c1354379f3f4bc0765376ffc816bd5eb3c4939c85d551d94b3eb003850f24311"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/krzko/proto2yaml/releases/download/v0.6.3/proto2yaml_linux_arm64.tar.gz"
+      sha256 "9feb4d65e68f8eaf82a71e2aad6689e02a9170f905fb37592f5e9f499eba5919"
 
       def install
         bin.install "proto2yaml"
