@@ -5,20 +5,20 @@
 class Tvctl < Formula
   desc "A command-line utility to interact with TradingView"
   homepage "https://github.com/krzko/tvctl"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_darwin_arm64.tar.gz"
-      sha256 "24babda6954f29797122579efbe2517346433b3d54d05c1283b89ecabbb6fbb0"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_darwin_arm64.tar.gz"
+      sha256 "cb2924897786bc32746da6041b4329a38feece15ffad72c4c2ecb472cec4171a"
 
       def install
         bin.install "tvctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_darwin_amd64.tar.gz"
-      sha256 "9bdf585d128fbda50a94b505af4d89323a819d7e48406bfeb4e866c016e7f12b"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_darwin_amd64.tar.gz"
+      sha256 "ce31ead8604fa77fed31ddb04d379e295df217c0cb0a985683edb57e7af832d7"
 
       def install
         bin.install "tvctl"
@@ -28,16 +28,16 @@ class Tvctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_linux_amd64.tar.gz"
-      sha256 "f11dff724b93ee3d380217cb9cd8ae08918a7b0c598a71b98f78163092bcb39d"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_linux_amd64.tar.gz"
+      sha256 "e6e903ff23eae4937c7887d004e23ba6d0aefdb9444c47e132ad64970cc096cf"
 
       def install
         bin.install "tvctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/krzko/tvctl/releases/download/v0.7.2/tvctl_linux_arm64.tar.gz"
-      sha256 "e755549a18bb24b247d1c1848d1afb07cac44afd6e0f7a5e5c680a52d691e90c"
+      url "https://github.com/krzko/tvctl/releases/download/v0.7.3/tvctl_linux_arm64.tar.gz"
+      sha256 "6e372743b83e8c3bdf0dcff81d01cb58e0c069e4477aa60e627c403811afb43e"
 
       def install
         bin.install "tvctl"
