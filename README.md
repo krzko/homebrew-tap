@@ -15,6 +15,7 @@ brew install krzko/tap/{{ taps }}
 The bar is open and we have the following taps available:
 
 - [opentelemetry-shell](https://github.com/krzko/opentelemetry-shell): 🚦 OpenTelemetry functions for shells.
+- [oteldemo](https://github.com/krzko/oteldemo): 🛜 oteldemo generates synthetic OpenTelemetry telemetry (traces, metrics, and logs) simulating a distributed microservices application.
 - [otelgen](https://github.com/krzko/otelgen): 🤖 A tool to generate synthetic OpenTelemetry logs, metrics and traces.
 - [proto2yaml](https://github.com/krzko/proto2yaml): 🔄 A command-line utility to export Protocol Buffers (proto) files to YAML and JSON.
 - [restmigrate](https://github.com/krzko/restmigrate): 🆙 Restmigrate is a tool for managing REST API configuration migrations, inspired by database schema migration tools.
