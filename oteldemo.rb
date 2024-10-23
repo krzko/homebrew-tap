@@ -5,20 +5,20 @@
 class Oteldemo < Formula
   desc "OpenTelemetry Demo Generator."
   homepage "https://github.com/krzko/oteldemo"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/krzko/oteldemo/releases/download/v0.1.2/oteldemo_darwin_amd64.tar.gz"
-      sha256 "ffd5cbca7c6741178b7ac344fb2c937c03c17bf09aa351f19082465552109275"
+      url "https://github.com/krzko/oteldemo/releases/download/v0.1.3/oteldemo_darwin_amd64.tar.gz"
+      sha256 "481109dd30e95bb3688d45ecde09778fdcd25cc2618fe27fab37fe235ecbd778"
 
       def install
         bin.install "oteldemo"
       end
     end
     on_arm do
-      url "https://github.com/krzko/oteldemo/releases/download/v0.1.2/oteldemo_darwin_arm64.tar.gz"
-      sha256 "2054c70ea5fa5d936be35f06bfbcb876e9151229afe1566f5ea254bccced7c0d"
+      url "https://github.com/krzko/oteldemo/releases/download/v0.1.3/oteldemo_darwin_arm64.tar.gz"
+      sha256 "aaceae9b4a2d7f42059eaf002e16e00db1bd863439f24cbbd474060f9b284546"
 
       def install
         bin.install "oteldemo"
@@ -29,8 +29,8 @@ class Oteldemo < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/oteldemo/releases/download/v0.1.2/oteldemo_linux_amd64.tar.gz"
-        sha256 "d95c702d5798d62664044564cbd1351cd494fa950e6872f3153fee3f0cd5cdec"
+        url "https://github.com/krzko/oteldemo/releases/download/v0.1.3/oteldemo_linux_amd64.tar.gz"
+        sha256 "a847de430461c66a86747494d8b45f866a963ecbf9e4e39c71d2ef2f786f9cc9"
 
         def install
           bin.install "oteldemo"
@@ -39,8 +39,8 @@ class Oteldemo < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/oteldemo/releases/download/v0.1.2/oteldemo_linux_arm64.tar.gz"
-        sha256 "f544ffefe3c39362909398f69668dc15bf155a45946206baf87b427f53ce6183"
+        url "https://github.com/krzko/oteldemo/releases/download/v0.1.3/oteldemo_linux_arm64.tar.gz"
+        sha256 "230a66a630253478845d22a673e85176250632e7d2958107a5485be9bce8488e"
 
         def install
           bin.install "oteldemo"
