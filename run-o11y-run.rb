@@ -5,20 +5,20 @@
 class RunO11yRun < Formula
   desc "A single-binary 🌯 wrapper around `docker compose` with embedded configurations to effortlessly run your local observability stack"
   homepage "https://github.com/krzko/run-o11y-run"
-  version "0.13.2"
+  version "0.13.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.2/run-o11y-run_darwin_amd64.tar.gz"
-      sha256 "b970f486a748b7b67c9d8cac628fdd8c9cac337ee2d77a3c80e07d7ba633fb0e"
+      url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.3/run-o11y-run_darwin_amd64.tar.gz"
+      sha256 "a0f1f5c1d214330a67fe384d4aff8a258d78396b440522ee948766a3f2092fcc"
 
       def install
         bin.install "run-o11y-run"
       end
     end
     on_arm do
-      url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.2/run-o11y-run_darwin_arm64.tar.gz"
-      sha256 "21bee2f7ad4c0193445be7a518096f3e6f08d8c230de402cb21e21a8dcc62329"
+      url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.3/run-o11y-run_darwin_arm64.tar.gz"
+      sha256 "d757abb5466e4c5cafe83816c57a74ca63d2805e16d3f90060535aa2ec53ebcb"
 
       def install
         bin.install "run-o11y-run"
@@ -29,8 +29,8 @@ class RunO11yRun < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.2/run-o11y-run_linux_amd64.tar.gz"
-        sha256 "253cae5bbf4b0167d9fb6ab6c7d3e4e9b5b4ccaa34428d7c51b1855e611c1a89"
+        url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.3/run-o11y-run_linux_amd64.tar.gz"
+        sha256 "83d7e64591e8f63c2e7788aac51be36402a1d1db2f2aa397dc0b26bd6969c08e"
 
         def install
           bin.install "run-o11y-run"
@@ -39,8 +39,8 @@ class RunO11yRun < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.2/run-o11y-run_linux_arm64.tar.gz"
-        sha256 "bededd32dae088c9f0ab5c59e2d1f1a8d773642fa499462363f9d27f83678811"
+        url "https://github.com/krzko/run-o11y-run/releases/download/v0.13.3/run-o11y-run_linux_arm64.tar.gz"
+        sha256 "845963f11c3760ca69096a19212e6725304c4c81584af3f327fe04d0eeba4f17"
 
         def install
           bin.install "run-o11y-run"
