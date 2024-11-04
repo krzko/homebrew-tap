@@ -5,20 +5,20 @@
 class Codemap < Formula
   desc "a tool that helps annotate code files with structural information to provide better context for LLMs (Large Language Models)."
   homepage "https://github.com/krzko/codemap"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/krzko/codemap/releases/download/v0.1.0/codemap_darwin_amd64.tar.gz"
-      sha256 "e15d5c00a6bfe12565f07d18216cdbde651465d97b478ba594233a8fcd2bfa73"
+      url "https://github.com/krzko/codemap/releases/download/v0.2.0/codemap_darwin_amd64.tar.gz"
+      sha256 "baf1c40ff76b325bc78c1a919614b70ad6ce4128e2addca184ba451dfaa623cc"
 
       def install
         bin.install "codemap"
       end
     end
     on_arm do
-      url "https://github.com/krzko/codemap/releases/download/v0.1.0/codemap_darwin_arm64.tar.gz"
-      sha256 "b35bbd5c4fcc19840899006f9547091ddaf20a91174949ae0db8368a89d14041"
+      url "https://github.com/krzko/codemap/releases/download/v0.2.0/codemap_darwin_arm64.tar.gz"
+      sha256 "cc43348f791c7565c9fe575efebf9b391278be5da2799e01e5b6ae648363ed3d"
 
       def install
         bin.install "codemap"
@@ -29,8 +29,8 @@ class Codemap < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/codemap/releases/download/v0.1.0/codemap_linux_amd64.tar.gz"
-        sha256 "c8829c5c6538de167760acb2f8b11c2385be52801a2e22c919f6c0cb12c87007"
+        url "https://github.com/krzko/codemap/releases/download/v0.2.0/codemap_linux_amd64.tar.gz"
+        sha256 "dd5e300abc4263d1788299ff73b1440af8244996463d6dadd5f6e26c91384e78"
 
         def install
           bin.install "codemap"
@@ -39,8 +39,8 @@ class Codemap < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/codemap/releases/download/v0.1.0/codemap_linux_arm64.tar.gz"
-        sha256 "b9c0c9281ff67e2113756cb754f43206faced8ff2a7c83afc5ef616d197e546c"
+        url "https://github.com/krzko/codemap/releases/download/v0.2.0/codemap_linux_arm64.tar.gz"
+        sha256 "0fd1137499ea51f4a7dacaaf2e2faed992cfa138d76581e1f561e6455c5e8412"
 
         def install
           bin.install "codemap"
