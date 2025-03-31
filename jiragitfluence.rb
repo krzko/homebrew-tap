@@ -5,20 +5,20 @@
 class Jiragitfluence < Formula
   desc "A tool to aggregate data from Jira and GitHub and publish it to Confluence."
   homepage "https://github.com/krzko/jiragitfluence"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.0/jiragitfluence_darwin_amd64.tar.gz"
-      sha256 "134b49927c16050db39daf91812bd766f5f0aa8871730cd9273986f0b406b376"
+      url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.1/jiragitfluence_darwin_amd64.tar.gz"
+      sha256 "a2cf320125228405ccf83562ef464c3226659210f6c5074b53ad0d8c1134fb40"
 
       def install
         bin.install "jiragitfluence"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.0/jiragitfluence_darwin_arm64.tar.gz"
-      sha256 "4ca1d220f8feb99ad15f45135ce7fe1c2ccb42226a006f95fe600da9387e2d34"
+      url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.1/jiragitfluence_darwin_arm64.tar.gz"
+      sha256 "006b966a014edbf49861a40e537084327dad31ac43c459e0e56dcc5d71911bda"
 
       def install
         bin.install "jiragitfluence"
@@ -29,8 +29,8 @@ class Jiragitfluence < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.0/jiragitfluence_linux_amd64.tar.gz"
-        sha256 "c9917d4c872740ea6efd119adbe7682b26c6307f7df9cebe2ae562c20f4eb9d7"
+        url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.1/jiragitfluence_linux_amd64.tar.gz"
+        sha256 "4d4b810eac828330ffcd331949ebdd8301a890da7f969ee9e6f7237b9d4ef37c"
 
         def install
           bin.install "jiragitfluence"
@@ -39,8 +39,8 @@ class Jiragitfluence < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.0/jiragitfluence_linux_arm64.tar.gz"
-        sha256 "55af394bcc699782ce3faadf01d7d8effb77f9cb7fd434be7c260f60589f8bbc"
+        url "https://github.com/krzko/jiragitfluence/releases/download/v0.1.1/jiragitfluence_linux_arm64.tar.gz"
+        sha256 "4ba9ebc00bd834720f2a85b9620fe4dcae3f12011bb50ff0b4121bf817b19ce0"
 
         def install
           bin.install "jiragitfluence"
