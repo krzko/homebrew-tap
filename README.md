@@ -15,6 +15,7 @@ brew install krzko/tap/{{ taps }}
 The bar is open and we have the following taps available:
 
 - [codemap](https://github.com/krzko/codemap): 🖍 A tool that helps annotate code files with structural information to provide better context for LLMs (Large Language Models).
+- [jiragitfluence](https://github.com/krzko/jiragitfluence): 🔄 JiraGitFluence is a command-line tool that aggregates data from Jira and GitHub, generates structured reports, and publishes them to Confluence.
 - [opentelemetry-shell](https://github.com/krzko/opentelemetry-shell): 🚦 OpenTelemetry functions for shells.
 - [oteldemo](https://github.com/krzko/oteldemo): 🛜 oteldemo generates synthetic OpenTelemetry telemetry (traces, metrics, and logs) simulating a distributed microservices application.
 - [otelgen](https://github.com/krzko/otelgen): 🤖 A tool to generate synthetic OpenTelemetry logs, metrics and traces.
